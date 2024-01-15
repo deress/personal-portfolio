@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     const [text] = useTypewriter({
@@ -37,12 +38,12 @@ const HomePage = () => {
                                 </p>
                             </div>
                             <div className="btn-wrapper">
-                                <a
-                                    href="/personal-portfolio/about"
+                                <Link
+                                    to="personal-portfolio/about"
                                     className="btn-lanjut"
                                 >
                                     Lanjutkan
-                                </a>
+                                </Link>
                             </div>
                         </Col>
                     </Row>
