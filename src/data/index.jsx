@@ -44,7 +44,7 @@ export const navLinks = [
     },
     {
         id: 5,
-        path: "CV_Idris Muhammad.pdf",
+        path: "personal-portfolio/CV_Idris Muhammad.pdf",
         text: "Resume",
     },
 ];
