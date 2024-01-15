@@ -7,7 +7,10 @@ const NavbarComponent = () => {
         <div>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand href="/" className="fs-3 fw-bold">
+                    <Navbar.Brand
+                        href="/personal-portfolio/"
+                        className="fs-3 fw-bold"
+                    >
                         Idris Muhammad
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
