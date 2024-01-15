@@ -3,7 +3,7 @@
   "name": "portofolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://deress.github.io/",
+  "homepage": "https://deress.github.io/personal-portfolio",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
