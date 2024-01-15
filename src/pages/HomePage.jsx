@@ -39,7 +39,7 @@ const HomePage = () => {
                             </div>
                             <div className="btn-wrapper">
                                 <Link
-                                    to="personal-portfolio/about"
+                                    to="/personal-portfolio/about"
                                     className="btn-lanjut"
                                 >
                                     Lanjutkan
