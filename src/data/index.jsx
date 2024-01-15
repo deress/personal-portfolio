@@ -24,22 +24,22 @@ import forthProject from "../assets/img/myproject/04.png";
 export const navLinks = [
     {
         id: 1,
-        path: "about",
+        path: "personal-portfolio/about",
         text: "About",
     },
     {
         id: 2,
-        path: "education",
+        path: "personal-portfolio/education",
         text: "Education",
     },
     {
         id: 3,
-        path: "experience",
+        path: "personal-portfolio/experience",
         text: "Experience",
     },
     {
         id: 4,
-        path: "project",
+        path: "personal-portfolio/project",
         text: "Projects",
     },
     {

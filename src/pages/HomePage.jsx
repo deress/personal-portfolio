@@ -37,7 +37,7 @@ const HomePage = () => {
                                 </p>
                             </div>
                             <div className="btn-wrapper">
-                                <a href="/about" className="btn-lanjut">
+                                <a href="about" className="btn-lanjut">
                                     Lanjutkan
                                 </a>
                             </div>

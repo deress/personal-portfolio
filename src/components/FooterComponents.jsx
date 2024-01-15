@@ -25,19 +25,34 @@ const FooterComponents = () => {
                     </Col>
                     <Col className="d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
                         <h5>Navigate</h5>
-                        <Link to="" className="text-decoration-none">
+                        <Link
+                            to="personal-portfolio/"
+                            className="text-decoration-none"
+                        >
                             Home
                         </Link>
-                        <Link to="about" className="text-decoration-none">
+                        <Link
+                            to="personal-portfolio/about"
+                            className="text-decoration-none"
+                        >
                             About
                         </Link>
-                        <Link to="education" className="text-decoration-none">
+                        <Link
+                            to="personal-portfolio/education"
+                            className="text-decoration-none"
+                        >
                             Education
                         </Link>
-                        <Link to="experience" className="text-decoration-none">
+                        <Link
+                            to="personal-portfolio/experience"
+                            className="text-decoration-none"
+                        >
                             Experience
                         </Link>
-                        <Link to="projects" className="text-decoration-none">
+                        <Link
+                            to="personal-portfolio/projects"
+                            className="text-decoration-none"
+                        >
                             Projects
                         </Link>
                     </Col>

@@ -13,11 +13,23 @@ function App() {
             <Navbar />
 
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/education" element={<EducationPage />} />
-                <Route path="/experience" element={<ExperiencePage />} />
-                <Route path="/project" element={<ProjectPage />} />
+                <Route path="/personal-portfolio" element={<HomePage />} />
+                <Route
+                    path="/personal-portfolio/about"
+                    element={<AboutPage />}
+                />
+                <Route
+                    path="/personal-portfolio/education"
+                    element={<EducationPage />}
+                />
+                <Route
+                    path="/personal-portfolio/experience"
+                    element={<ExperiencePage />}
+                />
+                <Route
+                    path="/personal-portfolio/project"
+                    element={<ProjectPage />}
+                />
             </Routes>
 
             <Footer />
