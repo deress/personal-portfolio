@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #f6f8fd;
+    --secondary-color: #39a2db;
+    --color-text: #231942;
+    --navbar-color: #ffffff;
+    --navbar-color-text: #000000;
+}
+
+.body {
+    background-color: #e7e7e7;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    color: var(--color-text);
+}
+
+.container .row:nth-child(1) h5 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.container .row:nth-child(2) .col img {
+    max-width: 100%;
+}
+
+.container .row:nth-child(2) h5 {
+    font-size: 22px;
+}
+
+.container .row:nth-child(2) p {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.container .row:nth-child(2) p span {
+    font-weight: 600;
+}
+
+.container .row:nth-child(2) p a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.container .row:nth-child(2) p a:hover i {
+    color: #00a6ff;
+}
+
+.container .row:nth-child(2) .desc {
+    text-align: justify;
+}
