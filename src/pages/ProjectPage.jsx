@@ -29,35 +29,38 @@ const ProjectPage = () => {
                         </Col>
                     </Row>
                     <Row>
-                        {projects.map((project) => {
-                            return (
-                                <Col key={project.id}>
-                                    <div className="project-wrap">
-                                        <img
-                                            src={project.image}
-                                            alt={`Gambar ${project.id + 1}`}
-                                        />
-                                        <div className="project-info">
-                                            <h4 className="text-center">
-                                                {project.name}
-                                            </h4>
-                                            <div className="text-center">
-                                                <a
-                                                    href={project.link}
-                                                    className="glightbox"
-                                                    data-gallery="projectGallery"
-                                                    data-glightbox="type: external"
-                                                    data-width="90%"
-                                                    data-height="90vh"
-                                                >
-                                                    <i className="bx bx-info-circle"></i>
-                                                </a>
+                        {projects
+                            .slice()
+                            .reverse()
+                            .map((project) => {
+                                return (
+                                    <Col key={project.id}>
+                                        <div className="project-wrap">
+                                            <img
+                                                src={project.image}
+                                                alt={`Gambar ${project.id + 1}`}
+                                            />
+                                            <div className="project-info">
+                                                <h4 className="text-center">
+                                                    {project.name}
+                                                </h4>
+                                                <div className="text-center">
+                                                    <a
+                                                        href={project.link}
+                                                        className="glightbox"
+                                                        data-gallery="projectGallery"
+                                                        data-glightbox="type: external"
+                                                        data-width="90%"
+                                                        data-height="90vh"
+                                                    >
+                                                        <i className="bx bx-info-circle"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Col>
-                            );
-                        })}
+                                    </Col>
+                                );
+                            })}
                     </Row>
                 </Container>
             </div>
