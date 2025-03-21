@@ -32,7 +32,7 @@ const HomePage = () => {
                                     contains <span>informations</span> about
                                     Idris, about{" "}
                                     <span>
-                                        himself, his experiences and projects
+                                        myself, my experiences and projects
                                     </span>
                                     .{" "}
                                 </p>
