@@ -42,7 +42,7 @@ const HomePage = () => {
                                     to="/personal-portfolio/about"
                                     className="btn-lanjut"
                                 >
-                                    Lanjutkan
+                                    Continue
                                 </Link>
                             </div>
                         </Col>
