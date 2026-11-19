@@ -1,7 +1,7 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import MyPicture from "../assets/img/Idris1.png";
+import MyPicture from "../assets/img/Idris1.webp";
 import { skillsTools } from "../data/index";
 import { recommendations } from "../data/index";
 

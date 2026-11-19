@@ -1,57 +1,59 @@
-import Yogi from "../assets/img/testimonial/yogi.jpeg";
-import Hasbi from "../assets/img/testimonial/hasbi.jpeg";
-import Rafi from "../assets/img/testimonial/rafi.jpeg";
-import Unej from "../assets/img/unej.jpg";
+import Yogi from "../assets/img/testimonial/yogi.webp";
+import Hasbi from "../assets/img/testimonial/hasbi.webp";
+import Rafi from "../assets/img/testimonial/rafi.webp";
+import Unej from "../assets/img/unej.webp";
 
-import firstSertif from "../assets/img/sertif/Belajar Dasar Pemrograman Web.png";
-import secondSertif from "../assets/img/sertif/Memulai Pemrograman dengan Dart.png";
-import thirdSertif from "../assets/img/sertif/Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.png";
-import forthSertif from "../assets/img/sertif/Belajar Dasar UX Design.png";
-import fifthSertif from "../assets/img/sertif/Pengenalan ke Logika Pemrograman.png";
-import sixthSertif from "../assets/img/sertif/Memulai Pemrograman dengan Java.png";
-import seventhSertif from "../assets/img/sertif/Memulai Pemrograman dengan Kotlin.png";
-import eighthSertif from "../assets/img/sertif/Belajar Prinsip Pemrograman SOLID.png";
-import ninthSertif from "../assets/img/sertif/Belajar Membuat Aplikasi Android untuk Pemula.png";
-import tenthSertif from "../assets/img/sertif/Belajar Fundamental Aplikasi Android.png";
-import eleventhSertif from "../assets/img/sertif/Belajar Pengembangan Aplikasi Android Intermediate.png";
-import twelfthSertif from "../assets/img/sertif/Belajar Membuat Aplikasi Android dengan Jetpack Compose.png";
-import thirteenthSertif from "../assets/img/sertif/Menjadi Android Developer Expert.png";
-import fourteenthSertif from "../assets/img/sertif/Belajar Membuat Aplikasi Web dengan React.png";
-import fifteenthSertif from "../assets/img/sertif/DCA Certificate.png";
+import firstSertif from "../assets/img/sertif/Belajar Dasar Pemrograman Web.webp";
+import secondSertif from "../assets/img/sertif/Memulai Pemrograman dengan Dart.webp";
+import thirdSertif from "../assets/img/sertif/Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.webp";
+import forthSertif from "../assets/img/sertif/Belajar Dasar UX Design.webp";
+import fifthSertif from "../assets/img/sertif/Pengenalan ke Logika Pemrograman.webp";
+import sixthSertif from "../assets/img/sertif/Memulai Pemrograman dengan Java.webp";
+import seventhSertif from "../assets/img/sertif/Memulai Pemrograman dengan Kotlin.webp";
+import eighthSertif from "../assets/img/sertif/Belajar Prinsip Pemrograman SOLID.webp";
+import ninthSertif from "../assets/img/sertif/Belajar Membuat Aplikasi Android untuk Pemula.webp";
+import tenthSertif from "../assets/img/sertif/Belajar Fundamental Aplikasi Android.webp";
+import eleventhSertif from "../assets/img/sertif/Belajar Pengembangan Aplikasi Android Intermediate.webp";
+import twelfthSertif from "../assets/img/sertif/Belajar Membuat Aplikasi Android dengan Jetpack Compose.webp";
+import thirteenthSertif from "../assets/img/sertif/Menjadi Android Developer Expert.webp";
+import fourteenthSertif from "../assets/img/sertif/Belajar Membuat Aplikasi Web dengan React.webp";
+import fifteenthSertif from "../assets/img/sertif/DCA Certificate.webp";
+import sixteenthSertif from "../assets/img/sertif/Belajar Dasar Git dengan Github.webp";
 
-import firstAward from "../assets/img/sertif/Bangkit 2023 Awards.png";
-import secondAward from "../assets/img/sertif/Sertif Magang MSIB.png";
+import firstAward from "../assets/img/sertif/Bangkit 2023 Awards.webp";
+import secondAward from "../assets/img/sertif/Sertif Magang MSIB.webp";
 
-import firstProject from "../assets/img/myproject/01.png";
-import secondProject from "../assets/img/myproject/02.png";
-import thirdProject from "../assets/img/myproject/03.png";
-import forthProject from "../assets/img/myproject/04.png";
-import fifthProject from "../assets/img/myproject/05.png";
+import firstProject from "../assets/img/myproject/01.webp";
+import secondProject from "../assets/img/myproject/02.webp";
+import thirdProject from "../assets/img/myproject/03.webp";
+import forthProject from "../assets/img/myproject/04.webp";
+import fifthProject from "../assets/img/myproject/05.webp";
 
 export const navLinks = [
     {
         id: 1,
-        path: "personal-portfolio/about",
+        path: "/about",
         text: "About",
     },
     {
         id: 2,
-        path: "personal-portfolio/education",
+        path: "/education",
         text: "Education",
     },
     {
         id: 3,
-        path: "personal-portfolio/experience",
+        path: "/experience",
         text: "Experience",
     },
     {
         id: 4,
-        path: "personal-portfolio/project",
+        path: "/project",
         text: "Projects",
     },
     {
         id: 5,
-        path: "personal-portfolio/CV_Idris Muhammad.pdf",
+        path: "CV_Idris Muhammad.pdf",
+        isFile: true,
         text: "Resume",
     },
 ];
@@ -139,24 +141,28 @@ export const certifications = [
         name: "Dicoding - Belajar Dasar Pemrograman Web",
         link: "https://www.dicoding.com/certificates/4EXG66Y4EZRL",
         image: firstSertif,
+        date: "2021-07-15",
     },
     {
         id: 2,
         name: "Dicoding - Memulai Pemrograman dengan Dart",
         link: "https://www.dicoding.com/certificates/JMZVGOE43ZN9",
         image: secondSertif,
+        date: "2022-07-22",
     },
     {
         id: 3,
         name: "Dicoding - Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
         link: "https://www.dicoding.com/certificates/6RPNWNY34P2M",
         image: thirdSertif,
+        date: "2023-08-09",
     },
     {
         id: 4,
         name: "Dicoding - Belajar Dasar UX Design",
         link: "https://www.dicoding.com/certificates/N9ZOO98M0ZG5",
         image: forthSertif,
+        date: "2024-02-01",
     },
 
     {
@@ -164,72 +170,84 @@ export const certifications = [
         name: "Dicoding - Pengenalan ke Logika Pemrograman",
         link: "https://www.dicoding.com/certificates/98XWG18E0PM3",
         image: fifthSertif,
+        date: "2023-08-10",
     },
     {
         id: 6,
         name: "Dicoding - Memulai Pemrograman dengan Java",
         link: "https://www.dicoding.com/certificates/NVP7ODY9RPR0",
         image: sixthSertif,
+        date: "2023-08-14",
     },
     {
         id: 7,
         name: "Dicoding - Memulai Pemrograman dengan Kotlin",
         link: "https://www.dicoding.com/certificates/NVP7OROKVPR0",
         image: seventhSertif,
+        date: "2023-08-20",
     },
     {
         id: 8,
         name: "Dicoding - Belajar Prinsip Pemrograman SOLID",
         link: "https://www.dicoding.com/certificates/JMZV1EGLOXN9",
         image: eighthSertif,
+        date: "2023-10-04",
     },
     {
         id: 9,
         name: "Dicoding - Belajar Membuat Aplikasi Android untuk Pemula",
         link: "https://www.dicoding.com/certificates/0LZ0QO3Y3Z65",
         image: ninthSertif,
+        date: "2023-08-30",
     },
     {
         id: 10,
         name: "Dicoding - Belajar Fundamental Aplikasi Android",
-        link: "https://www.dicoding.com/certificates/6RPN4EL48X2M",
+        link: "https://www.dicoding.com/certificates/JMZV13QNNXN9",
         image: tenthSertif,
+        date: "2023-09-26",
     },
     {
         id: 11,
         name: "Dicoding - Belajar Pengembangan Aplikasi Android Intermediate",
         link: "https://www.dicoding.com/certificates/N9ZO5RE50PG5",
         image: eleventhSertif,
+        date: "2023-10-30",
     },
     {
         id: 12,
         name: "Dicoding - Belajar Membuat Aplikasi Android dengan Jetpack Compose",
         link: "https://www.dicoding.com/certificates/6RPN4EL48X2M",
         image: twelfthSertif,
-    },
-    {
-        id: 12,
-        name: "Dicoding - Belajar Membuat Aplikasi Android dengan Jetpack Compose",
-        link: "https://www.dicoding.com/certificates/6RPN4EL48X2M",
-        image: twelfthSertif,
+        date: "2023-11-15",
     },
     {
         id: 13,
         name: "Dicoding - Menjadi Android Developer Expert",
         link: "https://www.dicoding.com/certificates/MRZMEG21LPYQ",
         image: thirteenthSertif,
+        date: "2024-04-18",
     },
     {
         id: 14,
         name: "Dicoding - Belajar Membuat Aplikasi Web dengan React",
         link: "https://www.dicoding.com/certificates/N9ZOYQ4RRPG5",
         image: fourteenthSertif,
+        date: "2024-11-20",
     },
     {
         id: 15,
         name: "dev.id - Dev Certification For Android (DCA)",
         link: "https://dev.id/certificate/verify/8Y0917LW24",
         image: fifteenthSertif,
+        date: "2025-01-22",
+    },
+    {
+        id: 16,
+        name: "Dicoding - Belajar Dasar Git dengan GitHub",
+        link: "https://www.dicoding.com/certificates/KEXL0WKWWPG2",
+        image: sixteenthSertif,
+        date: "2023-08-11",
     },
 ];
 

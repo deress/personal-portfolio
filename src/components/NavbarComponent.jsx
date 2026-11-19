@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "../data/index";
 
 const NavbarComponent = () => {
@@ -7,10 +7,7 @@ const NavbarComponent = () => {
         <div>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand
-                        href="/personal-portfolio/"
-                        className="fs-3 fw-bold"
-                    >
+                    <Navbar.Brand as={Link} to="/" className="fs-3 fw-bold">
                         Idris Muhammad
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,32 +16,32 @@ const NavbarComponent = () => {
                             {navLinks.map((link) => {
                                 return (
                                     <div className="nav-link" key={link.id}>
-                                        <NavLink
-                                            to={link.path}
-                                            className={({
-                                                isActive,
-                                                isPending,
-                                            }) =>
-                                                isPending
-                                                    ? "pending"
-                                                    : isActive
-                                                    ? "active"
-                                                    : ""
-                                            }
-                                            end
-                                            target={
-                                                link.text === "Resume"
-                                                    ? "_blank"
-                                                    : ""
-                                            }
-                                            rel={
-                                                link.text === "Resume"
-                                                    ? "noreferrer"
-                                                    : ""
-                                            }
-                                        >
-                                            {link.text}
-                                        </NavLink>
+                                        {link.isFile ? (
+                                            <a
+                                                href={`${import.meta.env.BASE_URL}${link.path}`}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                {link.text}
+                                            </a>
+                                        ) : (
+                                            <NavLink
+                                                to={link.path}
+                                                className={({
+                                                    isActive,
+                                                    isPending,
+                                                }) =>
+                                                    isPending
+                                                        ? "pending"
+                                                        : isActive
+                                                        ? "active"
+                                                        : ""
+                                                }
+                                                end
+                                            >
+                                                {link.text}
+                                            </NavLink>
+                                        )}
                                     </div>
                                 );
                             })}

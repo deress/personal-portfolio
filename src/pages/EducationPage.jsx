@@ -70,7 +70,7 @@ const EducationPage = () => {
                     <Row>
                         {certifications
                             .slice()
-                            .reverse()
+                            .sort((a, b) => b.date.localeCompare(a.date))
                             .map((certification) => {
                                 return (
                                     <Col key={certification.id}>

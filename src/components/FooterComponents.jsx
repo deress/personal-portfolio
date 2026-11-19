@@ -34,31 +34,31 @@ const FooterComponents = () => {
                     <Col className="d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
                         <h5>Navigate</h5>
                         <Link
-                            to="personal-portfolio/"
+                            to="/"
                             className="text-decoration-none"
                         >
                             Home
                         </Link>
                         <Link
-                            to="personal-portfolio/about"
+                            to="/about"
                             className="text-decoration-none"
                         >
                             About
                         </Link>
                         <Link
-                            to="personal-portfolio/education"
+                            to="/education"
                             className="text-decoration-none"
                         >
                             Education
                         </Link>
                         <Link
-                            to="personal-portfolio/experience"
+                            to="/experience"
                             className="text-decoration-none"
                         >
                             Experience
                         </Link>
                         <Link
-                            to="personal-portfolio/projects"
+                            to="/project"
                             className="text-decoration-none"
                         >
                             Projects

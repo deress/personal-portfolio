@@ -691,3 +691,13 @@
     width: 300px;
   }
 }
+
+.notfound-page h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+.notfound-page p {
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
