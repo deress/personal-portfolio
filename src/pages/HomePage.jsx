@@ -29,7 +29,7 @@ const HomePage = () => {
                                 <p>
                                     Welcome to this website — well like the name
                                     right - Idris Muhammad! This website
-                                    contains <span>informations</span> about
+                                    contains <span>information</span> about
                                     Idris, about{" "}
                                     <span>
                                         myself, my experiences and projects

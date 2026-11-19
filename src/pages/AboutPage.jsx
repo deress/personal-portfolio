@@ -28,14 +28,14 @@ const AboutPage = () => {
                         </Col>
                         <Col lg="7" className="px-4 mt-4 mt-lg-0">
                             <p>
-                                I am an Undergraduate student, majoring in
-                                System Information, Faculty Computer Science,{" "}
+                                I am a graduate of Information Systems, Faculty
+                                of Computer Science,{" "}
                                 <a
                                     href="https://unej.ac.id/"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    University Jember
+                                    University of Jember
                                 </a>{" "}
                                 who is interested in Mobile Development.
                             </p>
@@ -46,8 +46,8 @@ const AboutPage = () => {
                                 understanding the fundamental of PHP language.
                             </p>
                             <p>
-                                Alhamdulillah, I was selected as 4.5K
-                                participants from 47.8K registrants as Mobile
+                                Alhamdulillah, I was selected as 3.1K
+                                participants from 63K registrants as Mobile
                                 Development (Android) Cohort in{" "}
                                 <a
                                     href="https://grow.google/intl/id_id/bangkit/"

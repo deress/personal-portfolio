@@ -71,7 +71,7 @@ export const skillsTools = [
         name: "REST APIs",
         icon: "ri-global-line",
         color: "#96cc00",
-        link: "https://www.php.net/",
+        link: "https://developer.mozilla.org/en-US/docs/Glossary/REST",
     },
     {
         id: 3,
@@ -127,8 +127,8 @@ export const skillsTools = [
 export const educations = [
     {
         id: 1,
-        univName: "Univesitas Negeri Jember",
-        since: "Aug 2020 - Present",
+        univName: "Universitas Jember",
+        since: "Aug 2021 - July 2025",
         major: "Bachelor's Degree in Information Systems - S.Kom.",
         grade: "3.91",
         image: Unej,
@@ -268,17 +268,17 @@ export const workExperience = [
     {
         id: 1,
         position: "Mobile Development (Android) Cohort",
-        company: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+        company: "Bangkit Academy led by Google, GoTo, & Traveloka",
         companyLink: "https://grow.google/intl/id_id/bangkit/",
-        since: "Aug 2023 - Jan 2023",
+        since: "Aug 2023 - Jan 2024",
         status: "Apprenticeship",
         desc: (
             <>
                 Bangkit is a unique career readiness program led by Google and
                 delivered with support from industry experts from their industry
-                partner like GoTo, Traveloka, and Deeptech Foundation. The
+                partners like GoTo and Traveloka. The
                 program is designed to provide participants with first-hand
-                exposure to real-world practicioners and prepare them with
+                exposure to real-world practitioners and prepare them with
                 relevant skills for a successful career in leading tech
                 companies.
                 <br />I am successfully selected to be 3,100 participants from
@@ -312,9 +312,33 @@ export const workExperience = [
             </>
         ),
         responsibility: [
-            "Building a website-based Sistem Informasi Manajemen Arsip (SIMARSIP) application using the Laravel framework starting from the analysis stage, UI design and prototyping, Front-end development, Back-end integration, to the evaluation stage.",
-            "Conducting debugging and evaluation of the Sistem Informasi Administrasi Pelayanan Elektronik Terintegrasi webiste.",
-            "Coordinated and collaborate with other team members in working on a project to achieve maximum results.",
+            "Building a website-based Sistem Informasi Kearsipan Penduduk (SIKAP, formerly named SIMARSIP) application using the Laravel framework starting from the analysis stage, UI design and prototyping, Front-end development, Back-end integration, to the evaluation stage.",
+            "Conducting debugging and evaluation of the Sistem Informasi Administrasi Pelayanan Elektronik Terintegrasi website.",
+            "Coordinated and collaborated with other team members in working on a project to achieve maximum results.",
+        ],
+    },
+    {
+        id: 3,
+        position: "Software Engineer",
+        company: "MUC Consultindo",
+        companyLink: "https://muc.co.id/id",
+        since: "Dec 2025 - Present",
+        status: "Contract",
+        desc: (
+            <>
+                MUC Consulting has grown into one of Indonesia’s leading 
+                business consulting firms, built on a foundation of integrity, 
+                professionalism, and strong ethical values. As part of MUC Consulting’s 
+                commitment to Good Corporate Citizenship, we actively support the 
+                initiatives of Indonesia Business Links, Indonesia Global Compact, 
+                and United Nations Global Compact in advancing ethical and sustainable business practices.
+            </>
+        ),
+        responsibility: [
+            "Built an internal billing and invoicing system from scratch in Laravel, delivering its core features end to end within 5 months.",
+            "Develop and maintain 6 software applications, spanning new builds from scratch and enhancements to existing systems.",
+            "Integrated 3 internal company systems into 1 unified workflow, connecting their data so it no longer lives in separate tools.",
+            "Support users and cross-functional teams by resolving technical issues, refining UI/UX from feedback, writing technical documentation and safeguarding data integrity.",
         ],
     },
 ];
@@ -363,7 +387,7 @@ export const recommendations = [
         desc: "In the project team, Idris is a relaxed person but seems serious. Idris is a reliable person. He completes what the team has assigned to him precisely and perfectly.",
         image: Rafi,
         name: "M. Rafi Thufail",
-        skill: " Undergraduate Students in Information System, University Jember| Binar Academy 2023 Graduate in Backend Learning",
+        skill: "Undergraduate Student in Information Systems, University of Jember | Binar Academy 2023 Graduate in Backend Learning",
     },
     {
         id: 4,
@@ -384,7 +408,7 @@ export const recommendations = [
         desc: "In the project team, Idris is a relaxed person but seems serious. Idris is a reliable person. He completes what the team has assigned to him precisely and perfectly.",
         image: Rafi,
         name: "M. Rafi Thufail",
-        skill: " Undergraduate Students in Information System, University Jember| Binar Academy 2023 Graduate in Backend Learning",
+        skill: "Undergraduate Student in Information Systems, University of Jember | Binar Academy 2023 Graduate in Backend Learning",
     },
 ];
 
@@ -402,13 +426,13 @@ export const projects = [
                 have feature to search the github users, view their profiles,
                 and assign them to favorites whose the data is stored in local
                 storage by using Room. I also implement TabLayout for the
-                following and followers of users, recyle view, and many more.
+                following and followers of users, RecyclerView, and many more.
                 This project is one of the submissions in the &quot;Belajar
                 Fundamental Aplikasi Android course at Dicoding Indonesia&quot;
                 which became my first project in building an Android apps by
                 integrating APIs and databases into the apps. I made this
                 project from scratch until it can be used by myself and I got
-                5/5 stars for this submssion rating.
+                5/5 stars for this submission rating.
             </>
         ),
         date: "September 2023",
@@ -434,11 +458,10 @@ export const projects = [
                 Indonesia which became my first project in building an Android
                 apps by Google&apos;s APIs from Google Cloud into the apps. I
                 made this project from scratch until it can be used by myself
-                and I got 4/5 stars for the submission rating. Project Date :
-                Oktober 2023
+                and I got 4/5 stars for the submission rating.
             </>
         ),
-        date: "Oktober 2023",
+        date: "October 2023",
         category: "Android",
     },
     {
@@ -457,7 +480,7 @@ export const projects = [
                 Android dengan Jetpack Compose” course at Dicoding Indonesia
                 which became my first project in building an Android apps by
                 using Jetpack Compose. I made this project from scratch until it
-                can be used by myself and I got 4/5 stars for this submssion
+                can be used by myself and I got 4/5 stars for this submission
                 rating.
             </>
         ),
@@ -468,7 +491,7 @@ export const projects = [
         id: 4,
         name: "VisitCampus",
         link: "myproject/VisitCampus.html",
-        github: "",
+        github: "https://github.com/deress/VisitCampus",
         image: forthProject,
         desc: (
             <>
@@ -488,21 +511,21 @@ export const projects = [
                 it. This project is my final project/capstone project in Bangkit
                 Academy which became my first project build an Android apps as a
                 Team with combining Machine Learning Team and Cloud Computing
-                Team. Project Date : November 2023 - Desember 2023
+                Team.
             </>
         ),
-        date: "November 2023 - Desember 2023",
+        date: "November 2023 - December 2023",
         category: "Android",
     },
     {
         id: 5,
-        name: "SIKAP (Sistem Infromasi Kearsipan Penduduk)",
+        name: "SIKAP (Sistem Informasi Kearsipan Penduduk)",
         link: "myproject/sikap.html",
         github: "",
         image: fifthProject,
         desc: (
             <>
-                SIKAP (Sistem Infromasi Kearsipan Penduduk) is an website
+                SIKAP (Sistem Informasi Kearsipan Penduduk) is an website
                 application that use to data archiving management on Dinas
                 Kependudukan dan Pencatatan Sipil Kota Malang (Disdukcapil Kota
                 Malang), it use for the Internal Side of Disdukcapil Kota
@@ -512,7 +535,7 @@ export const projects = [
                 that differ for each type of user.
             </>
         ),
-        date: "Feb 2024 - Juli 2024",
+        date: "Feb 2024 - July 2024",
         category: "Website",
     },
 ];

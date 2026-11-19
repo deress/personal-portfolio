@@ -10,7 +10,6 @@ This is my personal portfolio website where I showcase my projects, skills, and 
 - Interactive UI/UX
 - Dark/Light mode (if applicable)
 - Projects showcase
-- Contact form
 
 ## 🛠️ Technologies Used
 - HTML, CSS, JavaScript
