@@ -9,18 +9,26 @@ const FooterComponents = () => {
                     <Col lg="5">
                         <h3 className="fw-bold">Idris Muhammad</h3>
                         <div className="no mb-1 mt-4">
-                            <Link className="text-decoration-none">
+                            <a
+                                href="https://wa.me/6285746249265"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-decoration-none"
+                            >
                                 <i className="fa-brands fa-whatsapp"></i>
                                 <p className="m-0">+62 857-4624-9265</p>
-                            </Link>
+                            </a>
                         </div>
                         <div className="email">
-                            <Link className="text-decoration-none">
+                            <a
+                                href="mailto:idrismuhammad257@gmail.com"
+                                className="text-decoration-none"
+                            >
                                 <i className="fa-regular fa-envelope"></i>
                                 <p className="m-0">
                                     idrismuhammad257@gmail.com
                                 </p>
-                            </Link>
+                            </a>
                         </div>
                     </Col>
                     <Col className="d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
