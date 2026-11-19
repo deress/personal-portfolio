@@ -9,7 +9,7 @@ import "./css/main.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <BrowserRouter basename="/personal-portfolio">
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <ScrollToTop />
 
             <App />

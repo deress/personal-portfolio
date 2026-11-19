@@ -15,7 +15,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-whatsapp"></i>
+                                <i className="ri-whatsapp-line"></i>
                                 <p className="m-0">+62 857-4624-9265</p>
                             </a>
                         </div>
@@ -24,7 +24,7 @@ const FooterComponents = () => {
                                 href="mailto:idrismuhammad257@gmail.com"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-regular fa-envelope"></i>
+                                <i className="ri-mail-line"></i>
                                 <p className="m-0">
                                     idrismuhammad257@gmail.com
                                 </p>
@@ -73,7 +73,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-instagram me-2"></i>
+                                <i className="ri-instagram-line me-2"></i>
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/idrsmhmd/"
@@ -81,7 +81,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-linkedin me-2"></i>
+                                <i className="ri-linkedin-box-fill me-2"></i>
                             </a>
                             <a
                                 href="https://www.youtube.com/channel/UCU9c9dr1jOYInCymuLQ-_Vw"
@@ -89,7 +89,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-youtube me-2"></i>
+                                <i className="ri-youtube-fill me-2"></i>
                             </a>
                         </div>
                     </Col>

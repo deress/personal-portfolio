@@ -38,7 +38,7 @@ const ProjectPage = () => {
                                         <div className="project-wrap">
                                             <img
                                                 src={project.image}
-                                                alt={`Gambar ${project.id + 1}`}
+                                                alt={`Screenshot of ${project.name}`}
                                             />
                                             <div className="project-info">
                                                 <h4 className="text-center">
@@ -52,8 +52,9 @@ const ProjectPage = () => {
                                                         data-glightbox="type: external"
                                                         data-width="90%"
                                                         data-height="90vh"
+                                                        aria-label={`View details of ${project.name}`}
                                                     >
-                                                        <i className="bx bx-info-circle"></i>
+                                                        <i className="ri-information-line"></i>
                                                     </a>
                                                 </div>
                                             </div>

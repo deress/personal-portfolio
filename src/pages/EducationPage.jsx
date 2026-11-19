@@ -4,6 +4,38 @@ import { educations, certifications, awards } from "../data/index";
 import "glightbox/dist/css/glightbox.css";
 import Glightbox from "glightbox";
 
+const GalleryCard = ({ item, variant }) => (
+    <Col>
+        <div className={`${variant}-wrap`}>
+            <img src={item.image} alt={item.name} />
+            <div className={`${variant}-info`}>
+                <h4 className="text-center">{item.name}</h4>
+                <div className="text-center">
+                    <a
+                        href={item.image}
+                        className="glightbox"
+                        data-gallery="certifGallery"
+                        data-glightbox="type:image"
+                        aria-label={`Enlarge ${item.name}`}
+                    >
+                        <i className="ri-zoom-in-line"></i>
+                    </a>
+                    {item.link && (
+                        <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`View credential for ${item.name}`}
+                        >
+                            <i className="ri-link"></i>
+                        </a>
+                    )}
+                </div>
+            </div>
+        </div>
+    </Col>
+);
+
 const EducationPage = () => {
     useEffect(() => {
         const lightbox = Glightbox({
@@ -34,6 +66,7 @@ const EducationPage = () => {
                                         <Card.Img
                                             variant="top"
                                             src={education.image}
+                                            alt={education.univName}
                                         />
                                         <Card.Body>
                                             <a
@@ -71,44 +104,13 @@ const EducationPage = () => {
                         {certifications
                             .slice()
                             .sort((a, b) => b.date.localeCompare(a.date))
-                            .map((certification) => {
-                                return (
-                                    <Col key={certification.id}>
-                                        <div className="certif-wrap">
-                                            <img
-                                                src={certification.image}
-                                                alt={`Gambar ${certification.id}`}
-                                            />
-                                            <div className="certif-info">
-                                                <h4 className="text-center">
-                                                    {certification.name}
-                                                </h4>
-                                                <div className="text-center">
-                                                    <a
-                                                        href={
-                                                            certification.image
-                                                        }
-                                                        className="glightbox"
-                                                        data-gallery="certifGallery"
-                                                        data-glightbox="type:image"
-                                                    >
-                                                        <i className="bx bx-zoom-in"></i>
-                                                    </a>
-                                                    <a
-                                                        href={
-                                                            certification.link
-                                                        }
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        <i className="bx bx-link"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                );
-                            })}
+                            .map((c) => (
+                                <GalleryCard
+                                    key={c.id}
+                                    item={c}
+                                    variant="certif"
+                                />
+                            ))}
                     </Row>
                 </Container>
             </div>
@@ -124,33 +126,13 @@ const EducationPage = () => {
                         {awards
                             .slice()
                             .reverse()
-                            .map((award) => {
-                                return (
-                                    <Col key={award.id}>
-                                        <div className="award-wrap">
-                                            <img
-                                                src={award.image}
-                                                alt={`Gambar ${award.id}`}
-                                            />
-                                            <div className="award-info">
-                                                <h4 className="text-center">
-                                                    {award.name}
-                                                </h4>
-                                                <div className="text-center">
-                                                    <a
-                                                        href={award.image}
-                                                        className="glightbox"
-                                                        data-gallery="certifGallery"
-                                                        data-glightbox="type:image"
-                                                    >
-                                                        <i className="bx bx-zoom-in"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                );
-                            })}
+                            .map((a) => (
+                                <GalleryCard
+                                    key={a.id}
+                                    item={a}
+                                    variant="award"
+                                />
+                            ))}
                     </Row>
                 </Container>
             </div>

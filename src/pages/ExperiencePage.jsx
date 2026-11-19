@@ -1,7 +1,39 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 import { organizationExperience, workExperience } from "../data/index";
+
+const ExperienceCard = ({ data }) => (
+    <Row className="px-3 mt-2 mb-4">
+        <Card>
+            <Card.Body className="m-4">
+                <h2 className="fw-bold">{data.position}</h2>
+
+                {data.companyLink ? (
+                    <a
+                        href={data.companyLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-decoration-none"
+                    >
+                        <h4>{data.company}</h4>
+                    </a>
+                ) : (
+                    <h4>{data.company}</h4>
+                )}
+
+                <h5>{data.since}</h5>
+                {data.status && <h5 className="fst-italic">{data.status}</h5>}
+                <p>{data.desc}</p>
+                <p className="mb-1">Responsibilities:</p>
+                <ul>
+                    {data.responsibility.map((item) => (
+                        <li key={item}>{item}</li>
+                    ))}
+                </ul>
+            </Card.Body>
+        </Card>
+    </Row>
+);
 
 const ExperiencePage = () => {
     return (
@@ -16,46 +48,9 @@ const ExperiencePage = () => {
                     {workExperience
                         .slice()
                         .reverse()
-                        .map((data) => {
-                            return (
-                                <Row key={data.id} className="px-3 mt-2 mb-4">
-                                    <Card>
-                                        <Card.Body className="m-4">
-                                            <h2 className="fw-bold">
-                                                {data.position}
-                                            </h2>
-
-                                            <Link
-                                                to={data.companyLink}
-                                                className="text-decoration-none"
-                                            >
-                                                <h4>{data.company}</h4>
-                                            </Link>
-
-                                            <h5>{data.since}</h5>
-                                            <h5 className="fst-italic">
-                                                {data.status}
-                                            </h5>
-                                            <p>{data.desc}</p>
-                                            <p className="mb-1">
-                                                Responsibilities:
-                                            </p>
-                                            <ul>
-                                                {data.responsibility.map(
-                                                    (item, index) => {
-                                                        return (
-                                                            <li key={index}>
-                                                                {item}
-                                                            </li>
-                                                        );
-                                                    }
-                                                )}
-                                            </ul>
-                                        </Card.Body>
-                                    </Card>
-                                </Row>
-                            );
-                        })}
+                        .map((data) => (
+                            <ExperienceCard key={data.id} data={data} />
+                        ))}
                 </Container>
             </div>
             <div className="organization pb-5">
@@ -65,45 +60,9 @@ const ExperiencePage = () => {
                             <h5>Organizational</h5>
                         </Col>
                     </Row>
-                    {organizationExperience.map((data, index) => {
-                        return (
-                            <Row key={data.id} className="px-3 mt-2 mb-4">
-                                <Card>
-                                    <Card.Body className="m-4">
-                                        <h2 className="fw-bold">
-                                            {data.position}
-                                        </h2>
-
-                                        <Link
-                                            to={data.companyLink}
-                                            className="text-decoration-none"
-                                        >
-                                            <h4>{data.company}</h4>
-                                        </Link>
-
-                                        <h5>{data.since}</h5>
-                                        <p>{data.desc}</p>
-                                        <p className="mb-1">
-                                            Responsibilities:
-                                        </p>
-                                        <ul>
-                                            {organizationExperience[
-                                                index
-                                            ].responsibility.map(
-                                                (item, index) => {
-                                                    return (
-                                                        <li key={index}>
-                                                            {item}
-                                                        </li>
-                                                    );
-                                                }
-                                            )}
-                                        </ul>
-                                    </Card.Body>
-                                </Card>
-                            </Row>
-                        );
-                    })}
+                    {organizationExperience.map((data) => (
+                        <ExperienceCard key={data.id} data={data} />
+                    ))}
                 </Container>
             </div>
         </div>

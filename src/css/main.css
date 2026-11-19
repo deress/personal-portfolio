@@ -408,6 +408,7 @@
   font-size: 30px;
   padding-right: 6px;
   color: #fff;
+  text-decoration: none;
 }
 .education-page .certifications .certif-info a:hover {
   color: #00a6ff;
@@ -478,6 +479,7 @@
   font-size: 30px;
   padding-right: 6px;
   color: #fff;
+  text-decoration: none;
 }
 .education-page .awards .award-info a:hover {
   color: #00a6ff;
@@ -610,6 +612,7 @@
   font-size: 30px;
   padding-right: 6px;
   color: #fff;
+  text-decoration: none;
 }
 .project-page .project .project-info a:hover {
   color: #00a6ff;

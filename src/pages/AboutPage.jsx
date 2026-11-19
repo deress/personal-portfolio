@@ -24,7 +24,7 @@ const AboutPage = () => {
                     </Row>
                     <Row>
                         <Col lg="4">
-                            <img src={MyPicture} alt="" />
+                            <img src={MyPicture} alt="Photo of Idris Muhammad" />
                         </Col>
                         <Col lg="7" className="px-4 mt-4 mt-lg-0">
                             <p>
@@ -163,14 +163,14 @@ const AboutPage = () => {
                             return (
                                 <SwiperSlide key={data.id} className="">
                                     <p className="desc">
-                                        <i className="bx bxs-quote-alt-left quote-icon-left" />
+                                        <i className="ri-double-quotes-l quote-icon-left" />
                                         {data.desc}
-                                        <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        <i className="ri-double-quotes-r quote-icon-right"></i>
                                     </p>
                                     <div>
                                         <img
                                             src={data.image}
-                                            alt=""
+                                            alt={`Photo of ${data.name}`}
                                             className="recomm-img"
                                         />
                                         <div className="recomm-name ">
