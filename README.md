@@ -8,7 +8,7 @@ This is my personal portfolio website where I showcase my projects, skills, and 
 ## 🌟 Features
 - Responsive design
 - Interactive UI/UX
-- Dark/Light mode (if applicable)
+- Dark/Light mode
 - Projects showcase
 
 ## 🛠️ Technologies Used

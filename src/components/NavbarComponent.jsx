@@ -1,8 +1,11 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "../data/index";
+import useTheme from "../hooks/useTheme";
 
 const NavbarComponent = () => {
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <div>
             <Navbar expand="lg">
@@ -45,6 +48,26 @@ const NavbarComponent = () => {
                                     </div>
                                 );
                             })}
+                            <div className="nav-link">
+                                <button
+                                    type="button"
+                                    className="theme-toggle"
+                                    onClick={toggleTheme}
+                                    aria-label={
+                                        theme === "dark"
+                                            ? "Switch to light mode"
+                                            : "Switch to dark mode"
+                                    }
+                                >
+                                    <i
+                                        className={
+                                            theme === "dark"
+                                                ? "ri-sun-line"
+                                                : "ri-moon-line"
+                                        }
+                                    ></i>
+                                </button>
+                            </div>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

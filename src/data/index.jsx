@@ -63,7 +63,7 @@ export const skillsTools = [
         id: 1,
         name: "Github",
         icon: "ri-github-fill",
-        color: "#333",
+        color: "var(--color-text)",
         link: "https://github.com/",
     },
     {

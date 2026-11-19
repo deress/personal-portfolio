@@ -4,6 +4,12 @@
     --color-text: #231942;
     --navbar-color: #ffffff;
     --navbar-color-text: #000000;
+    --link-color: #00a6ff;
+}
+
+[data-bs-theme="dark"] {
+    --color-text: #e6e6f0;
+    --link-color: #4fc3ff;
 }
 
 .body {
@@ -44,7 +50,7 @@
 }
 
 .container .row:nth-child(2) p a:hover i {
-    color: #00a6ff;
+    color: var(--link-color);
 }
 
 .container .row:nth-child(2) .desc {

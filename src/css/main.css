@@ -4,6 +4,25 @@
   --color-text: #231942;
   --navbar-color: #ffffff;
   --navbar-color-text: #000000;
+  --navbar-bg: #ffffff;
+  --border-color: #545353;
+  --hover-bg: #bebebe41;
+  --quote-bg: #e7e7e7;
+  --link-color: #00a6ff;
+  --btn-bg: #ffffff;
+  --btn-text: #545353;
+}
+
+[data-bs-theme="dark"] {
+  --color-text: #e6e6f0;
+  --navbar-color-text: #e6e6f0;
+  --navbar-bg: #1a1a1a;
+  --border-color: #8a8a8a;
+  --hover-bg: #ffffff14;
+  --quote-bg: #2a2a2a;
+  --link-color: #4fc3ff;
+  --btn-bg: #1a1a1a;
+  --btn-text: #e6e6f0;
 }
 * {
   font-family: Poppins, sans-serif;
@@ -13,7 +32,7 @@
   padding: 20px 0;
   width: 100%;
   color: var(--navbar-color);
-  background-color: #fff;
+  background-color: var(--navbar-bg);
   box-shadow:
     #0003 0 3px 3px,
     #0000001a 0 0;
@@ -115,20 +134,20 @@
 .btn-wrapper .btn-lanjut {
   display: inline-block;
   padding: 6px 32px;
-  color: #545353;
+  color: var(--btn-text);
   font-size: 22px;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: #fff;
-  border: 2px solid #545353;
+  background: var(--btn-bg);
+  border: 2px solid var(--border-color);
   transition: all 0.2s ease;
 }
 .btn-wrapper .btn-lanjut:hover {
   background: #353535;
   color: #fff;
-  border: 2px solid #545353;
+  border: 2px solid var(--border-color);
   transform: translateY(-8px);
 }
 .about-page .about .row:nth-child(1) {
@@ -160,7 +179,7 @@
   text-align: justify;
 }
 .about-page .about .row:nth-child(2) p a {
-  color: #00a6ff;
+  color: var(--link-color);
   text-decoration: none;
 }
 .about-page .about .row:nth-child(2) p a:hover {
@@ -185,11 +204,11 @@
   box-sizing: border-box;
 }
 .about-page .skills .row:nth-child(2) .card {
-  border: 2px solid #545353;
+  border: 2px solid var(--border-color);
   transition: all 0.2s ease;
 }
 .about-page .skills .row:nth-child(2) .card:hover {
-  background: #bebebe41;
+  background: var(--hover-bg);
 }
 .about-page .skills .row:nth-child(2) a i {
   font-size: 36px;
@@ -241,7 +260,7 @@
   font-size: 16px;
   font-weight: 500;
   font-style: italic;
-  background-color: #e7e7e7;
+  background-color: var(--quote-bg);
   border-radius: 10px;
   padding: 20px 20px 60px;
   position: relative;
@@ -269,7 +288,7 @@
   position: relative;
   z-index: 2;
   border: 6px solid #cccccc86;
-  color: #00a6ff;
+  color: var(--link-color);
 }
 .about-page .recommendations .swiper-slide .recomm-name h4 {
   font-size: 20px;
@@ -299,19 +318,19 @@
   box-sizing: border-box;
 }
 .education-page .education .row:nth-child(2) .card {
-  border: 2px solid #545353;
+  border: 2px solid var(--border-color);
   transition: all 0.2s ease;
   color: var(--color-text);
   width: 85%;
 }
 .education-page .education .row:nth-child(2) .card:hover {
-  background: #bebebe41;
+  background: var(--hover-bg);
 }
 .education-page .education .row:nth-child(2) .card a {
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  color: #00a6ff;
+  color: var(--link-color);
 }
 .education-page .education .row:nth-child(2) .card a:hover {
   text-decoration: underline;
@@ -350,7 +369,7 @@
   padding-inline: 10px;
 }
 .education-page .certifications .row:nth-child(2) .col {
-  border: 5px solid #545353;
+  border: 5px solid var(--border-color);
   border-radius: 5px;
   padding: 0;
 }
@@ -420,7 +439,7 @@
   padding-inline: 10px;
 }
 .education-page .awards .row:nth-child(2) .col {
-  border: 5px solid #545353;
+  border: 5px solid var(--border-color);
   border-radius: 5px;
   padding: 0;
 }
@@ -499,19 +518,19 @@
 }
 .experience-page .card {
   color: var(--color-text);
-  border: 2px solid #545353;
+  border: 2px solid var(--border-color);
   border-radius: 20px;
   transition: all 0.3s ease-in-out 0s;
 }
 .experience-page .card:hover {
-  background: #bebebe41;
+  background: var(--hover-bg);
 }
 .experience-page .card h2 {
   font-size: 30px;
 }
 .experience-page .card h4,
 .experience-page .card a {
-  color: #00a6ff;
+  color: var(--link-color);
 }
 .experience-page .card a h4:hover {
   text-decoration: underline;
@@ -554,7 +573,7 @@
   padding-inline: 10px;
 }
 .project-page .project .row:nth-child(2) .col {
-  border: 5px solid #545353;
+  border: 5px solid var(--border-color);
   border-radius: 5px;
   padding: 0;
 }
@@ -700,4 +719,17 @@
 .notfound-page p {
   color: var(--color-text);
   margin-bottom: 2rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--navbar-color-text);
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  color: var(--secondary-color);
 }
