@@ -11,67 +11,109 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination } from "swiper/modules";
+import { useLang } from "../i18n/context";
+
+const UnejLink = ({ children }) => (
+    <a href="https://unej.ac.id/" target="_blank" rel="noreferrer">
+        {children}
+    </a>
+);
+
+const BangkitLink = () => (
+    <a
+        href="https://grow.google/intl/id_id/bangkit/"
+        target="_blank"
+        rel="noreferrer"
+    >
+        Bangkit Academy led by Google, GoTo, & Traveloka
+    </a>
+);
+
+const aboutContent = {
+    en: (
+        <>
+            <p>
+                I am a graduate of Information Systems, Faculty of Computer
+                Science, <UnejLink>University of Jember</UnejLink> who is
+                interested in Mobile Development.
+            </p>
+            <p>
+                I have experience as a Web Developer using PHP/Laravel and C#,
+                skills I gained during college. Certainly, I have a solid
+                understanding of the fundamentals of the PHP language.
+            </p>
+            <p>
+                Alhamdulillah, I was selected as one of 3.1K participants from
+                63K registrants as Mobile Development (Android) Cohort in{" "}
+                <BangkitLink /> and graduated with Google Certified as Associate
+                Android Developer. I gained many skills as an Android Developer.
+                I also honed my teamwork and soft skills by joining the UKM
+                O-MACO organization in my faculty.
+            </p>
+            <p>
+                Apart from that, I also have a leadership skill, time management
+                skill, communication skill, and responsibility which have helped
+                me a lot throughout my journey. I’m excited to gain hands-on
+                experience in the technology field and want to implement my
+                skills, collaborate, learn, and work as a team.
+            </p>
+        </>
+    ),
+    id: (
+        <>
+            <p>
+                Saya adalah lulusan Sistem Informasi, Fakultas Ilmu Komputer,{" "}
+                <UnejLink>Universitas Jember</UnejLink> yang tertarik pada
+                bidang Mobile Development.
+            </p>
+            <p>
+                Saya memiliki pengalaman sebagai Web Developer menggunakan
+                PHP/Laravel dan C# yang saya pelajari selama kuliah, serta
+                pemahaman yang kuat tentang dasar-dasar bahasa PHP.
+            </p>
+            <p>
+                Alhamdulillah, saya terpilih sebagai salah satu dari 3,1 ribu
+                peserta dari total 63 ribu pendaftar Mobile Development
+                (Android) Cohort di <BangkitLink /> dan lulus dengan sertifikasi
+                Google Associate Android Developer. Di sana saya memperoleh
+                banyak keterampilan sebagai Android Developer. Saya juga
+                mengasah kemampuan bekerja dalam tim dan soft skill dengan
+                bergabung di organisasi UKM O-MACO di fakultas saya.
+            </p>
+            <p>
+                Selain itu, saya memiliki kemampuan kepemimpinan, manajemen
+                waktu, komunikasi, serta rasa tanggung jawab yang banyak
+                membantu saya sepanjang perjalanan ini. Saya bersemangat untuk
+                mendapatkan pengalaman langsung di bidang teknologi, menerapkan
+                keterampilan saya, berkolaborasi, terus belajar, dan bekerja
+                dalam tim.
+            </p>
+        </>
+    ),
+};
 
 const AboutPage = () => {
+    const { t, tr } = useLang();
+
     return (
         <div className="about-page">
             <div className="about">
                 <Container>
                     <Row>
-                        <Col className="pb-1">
-                            <h5>About</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("about")}</h5>
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg="4">
+                        <Col lg="4" data-aos="fade-right">
                             <img src={MyPicture} alt="Photo of Idris Muhammad" />
                         </Col>
-                        <Col lg="7" className="px-4 mt-4 mt-lg-0">
-                            <p>
-                                I am a graduate of Information Systems, Faculty
-                                of Computer Science,{" "}
-                                <a
-                                    href="https://unej.ac.id/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    University of Jember
-                                </a>{" "}
-                                who is interested in Mobile Development.
-                            </p>
-                            <p>
-                                I have experience as a Web Developer in
-                                PHP/Laravel and C# that I got those skills from
-                                my college. Certainly, I have a solid
-                                understanding the fundamental of PHP language.
-                            </p>
-                            <p>
-                                Alhamdulillah, I was selected as 3.1K
-                                participants from 63K registrants as Mobile
-                                Development (Android) Cohort in{" "}
-                                <a
-                                    href="https://grow.google/intl/id_id/bangkit/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Bangkit Academy led by Google, GoTo, &
-                                    Traveloka{" "}
-                                </a>{" "}
-                                and graduated with Google Certified as Associate
-                                Android Developer. I gained many skills as an
-                                Android Developer. I also honing my experience
-                                as an team and soft skills by joining the UKM
-                                O-MACO organization in my faculty.
-                            </p>
-                            <p>
-                                Apart from that, I also have a leadership skill,
-                                time management skill, communication skill, and
-                                responsibility which have helped me a lot during
-                                through my journey. I’m excited to gaining
-                                hands-on experience in the technology field and
-                                want to implement my skills, collaborate, learn,
-                                and work as a team.
-                            </p>
+                        <Col
+                            lg="7"
+                            className="px-4 mt-4 mt-lg-0"
+                            data-aos="fade-left"
+                        >
+                            {tr(aboutContent)}
                         </Col>
                     </Row>
                 </Container>
@@ -80,18 +122,20 @@ const AboutPage = () => {
             <div className="skills">
                 <Container>
                     <Row>
-                        <Col className="pb-1">
-                            <h5>Skills & Tools</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("skillsTools")}</h5>
                         </Col>
                     </Row>
                     <Row>
-                        {skillsTools.map((skillTool) => {
+                        {skillsTools.map((skillTool, i) => {
                             return (
                                 <Col
                                     key={skillTool.id}
                                     lg="3"
                                     md="4"
                                     className="mb-4"
+                                    data-aos="zoom-in"
+                                    data-aos-delay={(i % 4) * 100}
                                 >
                                     <Link
                                         to={skillTool.link}
@@ -123,10 +167,11 @@ const AboutPage = () => {
             <div className="recommendations">
                 <Container>
                     <Row>
-                        <Col className="pb-1">
-                            <h5>Recommendations</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("recommendations")}</h5>
                         </Col>
                     </Row>
+                    <div data-aos="fade-up">
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={10}
@@ -182,6 +227,7 @@ const AboutPage = () => {
                             );
                         })}
                     </Swiper>
+                    </div>
                 </Container>
             </div>
         </div>

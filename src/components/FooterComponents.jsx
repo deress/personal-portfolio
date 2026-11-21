@@ -1,7 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useLang } from "../i18n/context";
 
 const FooterComponents = () => {
+    const { t } = useLang();
+
     return (
         <div className="footer pt-5 pb-3">
             <Container>
@@ -32,40 +35,40 @@ const FooterComponents = () => {
                         </div>
                     </Col>
                     <Col className="d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
-                        <h5>Navigate</h5>
+                        <h5>{t("navigate")}</h5>
                         <Link
                             to="/"
                             className="text-decoration-none"
                         >
-                            Home
+                            {t("home")}
                         </Link>
                         <Link
                             to="/about"
                             className="text-decoration-none"
                         >
-                            About
+                            {t("about")}
                         </Link>
                         <Link
                             to="/education"
                             className="text-decoration-none"
                         >
-                            Education
+                            {t("education")}
                         </Link>
                         <Link
                             to="/experience"
                             className="text-decoration-none"
                         >
-                            Experience
+                            {t("experience")}
                         </Link>
                         <Link
                             to="/project"
                             className="text-decoration-none"
                         >
-                            Projects
+                            {t("projects")}
                         </Link>
                     </Col>
                     <Col lg="4" className="mt-lg-0 mt-5">
-                        <h5 className="mb-3">Social Media</h5>
+                        <h5 className="mb-3">{t("socialMedia")}</h5>
                         <div className="social mt-4">
                             <a
                                 href="https://www.instagram.com/saudagaridrss/"

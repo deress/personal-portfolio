@@ -2,9 +2,11 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "../data/index";
 import useTheme from "../hooks/useTheme";
+import { useLang } from "../i18n/context";
 
 const NavbarComponent = () => {
     const { theme, toggleTheme } = useTheme();
+    const { lang, toggleLang, t, tr } = useLang();
 
     return (
         <div>
@@ -15,17 +17,17 @@ const NavbarComponent = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto align-items-lg-center">
                             {navLinks.map((link) => {
                                 return (
                                     <div className="nav-link" key={link.id}>
                                         {link.isFile ? (
                                             <a
-                                                href={`${import.meta.env.BASE_URL}${link.path}`}
+                                                href={`${import.meta.env.BASE_URL}${tr(link.path)}`}
                                                 target="_blank"
                                                 rel="noreferrer"
                                             >
-                                                {link.text}
+                                                {t(link.key)}
                                             </a>
                                         ) : (
                                             <NavLink
@@ -42,7 +44,7 @@ const NavbarComponent = () => {
                                                 }
                                                 end
                                             >
-                                                {link.text}
+                                                {t(link.key)}
                                             </NavLink>
                                         )}
                                     </div>
@@ -51,12 +53,28 @@ const NavbarComponent = () => {
                             <div className="nav-link">
                                 <button
                                     type="button"
+                                    className="lang-toggle"
+                                    onClick={toggleLang}
+                                    aria-label={t("switchLang")}
+                                >
+                                    <span className={lang === "en" ? "active" : ""}>
+                                        EN
+                                    </span>
+                                    {" | "}
+                                    <span className={lang === "id" ? "active" : ""}>
+                                        ID
+                                    </span>
+                                </button>
+                            </div>
+                            <div className="nav-link">
+                                <button
+                                    type="button"
                                     className="theme-toggle"
                                     onClick={toggleTheme}
                                     aria-label={
                                         theme === "dark"
-                                            ? "Switch to light mode"
-                                            : "Switch to dark mode"
+                                            ? t("switchToLight")
+                                            : t("switchToDark")
                                     }
                                 >
                                     <i

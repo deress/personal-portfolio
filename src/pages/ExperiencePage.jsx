@@ -1,68 +1,82 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 import { organizationExperience, workExperience } from "../data/index";
+import { useLang } from "../i18n/context";
 
-const ExperienceCard = ({ data }) => (
-    <Row className="px-3 mt-2 mb-4">
-        <Card>
-            <Card.Body className="m-4">
-                <h2 className="fw-bold">{data.position}</h2>
+const TimelineItem = ({ data }) => {
+    const { t, tr } = useLang();
 
-                {data.companyLink ? (
-                    <a
-                        href={data.companyLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-decoration-none"
-                    >
+    return (
+        <div className="timeline-item" data-aos="fade-up">
+            <span className="timeline-dot" />
+            <p className="timeline-date">
+                {tr(data.since)}
+                {data.status && ` · ${tr(data.status)}`}
+            </p>
+            <Card>
+                <Card.Body className="m-3 m-lg-4">
+                    <h2 className="fw-bold">{tr(data.position)}</h2>
+
+                    {data.companyLink ? (
+                        <a
+                            href={data.companyLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-decoration-none"
+                        >
+                            <h4>{data.company}</h4>
+                        </a>
+                    ) : (
                         <h4>{data.company}</h4>
-                    </a>
-                ) : (
-                    <h4>{data.company}</h4>
-                )}
+                    )}
 
-                <h5>{data.since}</h5>
-                {data.status && <h5 className="fst-italic">{data.status}</h5>}
-                <p>{data.desc}</p>
-                <p className="mb-1">Responsibilities:</p>
-                <ul>
-                    {data.responsibility.map((item) => (
-                        <li key={item}>{item}</li>
-                    ))}
-                </ul>
-            </Card.Body>
-        </Card>
-    </Row>
-);
+                    <p>{tr(data.desc)}</p>
+                    <p className="mb-1">{t("responsibilities")}</p>
+                    <ul>
+                        {tr(data.responsibility).map((item) => (
+                            <li key={item}>{item}</li>
+                        ))}
+                    </ul>
+                </Card.Body>
+            </Card>
+        </div>
+    );
+};
 
 const ExperiencePage = () => {
+    const { t } = useLang();
+
     return (
         <div className="experience-page">
             <div className="work">
                 <Container>
                     <Row>
-                        <Col className="pb-1">
-                            <h5>Work</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("work")}</h5>
                         </Col>
                     </Row>
-                    {workExperience
-                        .slice()
-                        .reverse()
-                        .map((data) => (
-                            <ExperienceCard key={data.id} data={data} />
-                        ))}
+                    <div className="timeline">
+                        {workExperience
+                            .slice()
+                            .reverse()
+                            .map((data) => (
+                                <TimelineItem key={data.id} data={data} />
+                            ))}
+                    </div>
                 </Container>
             </div>
             <div className="organization pb-5">
                 <Container>
                     <Row>
-                        <Col className="pb-1">
-                            <h5>Organizational</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("organizational")}</h5>
                         </Col>
                     </Row>
-                    {organizationExperience.map((data) => (
-                        <ExperienceCard key={data.id} data={data} />
-                    ))}
+                    <div className="timeline">
+                        {organizationExperience.map((data) => (
+                            <TimelineItem key={data.id} data={data} />
+                        ))}
+                    </div>
                 </Container>
             </div>
         </div>

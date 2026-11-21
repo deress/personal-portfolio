@@ -6,6 +6,7 @@ import AboutPage from "./pages/AboutPage";
 import EducationPage from "./pages/EducationPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import ProjectPage from "./pages/ProjectPage";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/education" element={<EducationPage />} />
                 <Route path="/experience" element={<ExperiencePage />} />
                 <Route path="/project" element={<ProjectPage />} />
+                <Route path="/project/:slug" element={<ProjectDetailPage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
 

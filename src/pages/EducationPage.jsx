@@ -3,9 +3,10 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { educations, certifications, awards } from "../data/index";
 import "glightbox/dist/css/glightbox.css";
 import Glightbox from "glightbox";
+import { useLang } from "../i18n/context";
 
 const GalleryCard = ({ item, variant }) => (
-    <Col>
+    <Col data-aos="fade-up">
         <div className={`${variant}-wrap`}>
             <img src={item.image} alt={item.name} />
             <div className={`${variant}-info`}>
@@ -37,6 +38,8 @@ const GalleryCard = ({ item, variant }) => (
 );
 
 const EducationPage = () => {
+    const { t, tr } = useLang();
+
     useEffect(() => {
         const lightbox = Glightbox({
             selector: ".glightbox",
@@ -54,14 +57,14 @@ const EducationPage = () => {
             <div className="education">
                 <Container className="pb-4">
                     <Row>
-                        <Col className="pb-1">
-                            <h5>Education</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("education")}</h5>
                         </Col>
                     </Row>
                     <Row className="row-cols-lg-3 row-cols-md-1 row-cols-1">
                         {educations.map((education) => {
                             return (
-                                <Col key={education.id}>
+                                <Col key={education.id} data-aos="fade-up">
                                     <Card>
                                         <Card.Img
                                             variant="top"
@@ -76,13 +79,13 @@ const EducationPage = () => {
                                             >
                                                 {education.univName}
                                             </a>
-                                            <h5>{education.since}</h5>
+                                            <h5>{tr(education.since)}</h5>
                                             <p>
                                                 {" "}
-                                                <em>{education.major}</em>{" "}
+                                                <em>{tr(education.major)}</em>{" "}
                                                 <br />
-                                                Grade: {education.grade}/4.0
-                                                (GPA)
+                                                {t("gpa")}: {education.grade}/4.0{" "}
+                                                {t("gpaSuffix")}
                                             </p>
                                         </Card.Body>
                                     </Card>
@@ -96,8 +99,8 @@ const EducationPage = () => {
             <div className="certifications">
                 <Container>
                     <Row>
-                        <Col className="pb-1 ">
-                            <h5>Certifications</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("certifications")}</h5>
                         </Col>
                     </Row>
                     <Row>
@@ -118,8 +121,8 @@ const EducationPage = () => {
             <div className="awards">
                 <Container>
                     <Row>
-                        <Col className="pb-1">
-                            <h5>Awards</h5>
+                        <Col className="pb-1" data-aos="fade-up">
+                            <h5>{t("awards")}</h5>
                         </Col>
                     </Row>
                     <Row>
