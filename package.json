@@ -1,5 +1,4 @@
 {
-  
   "name": "portofolio",
   "private": true,
   "version": "0.0.0",
@@ -9,11 +8,13 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.2",
     "glightbox": "^3.2.0",
     "react": "^18.2.0",
@@ -32,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
+    "sharp": "^0.35.5",
     "vite": "^5.0.8"
   }
 }

@@ -1,7 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useLang } from "../i18n/context";
 
 const FooterComponents = () => {
+    const { t } = useLang();
+
     return (
         <div className="footer pt-5 pb-3">
             <Container>
@@ -15,7 +18,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-whatsapp"></i>
+                                <i className="ri-whatsapp-line"></i>
                                 <p className="m-0">+62 857-4624-9265</p>
                             </a>
                         </div>
@@ -24,7 +27,7 @@ const FooterComponents = () => {
                                 href="mailto:idrismuhammad257@gmail.com"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-regular fa-envelope"></i>
+                                <i className="ri-mail-line"></i>
                                 <p className="m-0">
                                     idrismuhammad257@gmail.com
                                 </p>
@@ -32,40 +35,40 @@ const FooterComponents = () => {
                         </div>
                     </Col>
                     <Col className="d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
-                        <h5>Navigate</h5>
+                        <h5>{t("navigate")}</h5>
                         <Link
-                            to="personal-portfolio/"
+                            to="/"
                             className="text-decoration-none"
                         >
-                            Home
+                            {t("home")}
                         </Link>
                         <Link
-                            to="personal-portfolio/about"
+                            to="/about"
                             className="text-decoration-none"
                         >
-                            About
+                            {t("about")}
                         </Link>
                         <Link
-                            to="personal-portfolio/education"
+                            to="/education"
                             className="text-decoration-none"
                         >
-                            Education
+                            {t("education")}
                         </Link>
                         <Link
-                            to="personal-portfolio/experience"
+                            to="/experience"
                             className="text-decoration-none"
                         >
-                            Experience
+                            {t("experience")}
                         </Link>
                         <Link
-                            to="personal-portfolio/projects"
+                            to="/project"
                             className="text-decoration-none"
                         >
-                            Projects
+                            {t("projects")}
                         </Link>
                     </Col>
                     <Col lg="4" className="mt-lg-0 mt-5">
-                        <h5 className="mb-3">Social Media</h5>
+                        <h5 className="mb-3">{t("socialMedia")}</h5>
                         <div className="social mt-4">
                             <a
                                 href="https://www.instagram.com/saudagaridrss/"
@@ -73,7 +76,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-instagram me-2"></i>
+                                <i className="ri-instagram-line me-2"></i>
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/idrsmhmd/"
@@ -81,7 +84,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-linkedin me-2"></i>
+                                <i className="ri-linkedin-box-fill me-2"></i>
                             </a>
                             <a
                                 href="https://www.youtube.com/channel/UCU9c9dr1jOYInCymuLQ-_Vw"
@@ -89,7 +92,7 @@ const FooterComponents = () => {
                                 rel="noreferrer"
                                 className="text-decoration-none"
                             >
-                                <i className="fa-brands fa-youtube me-2"></i>
+                                <i className="ri-youtube-fill me-2"></i>
                             </a>
                         </div>
                     </Col>
